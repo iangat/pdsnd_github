@@ -3,6 +3,12 @@
 # Project 2 - Python
 # Explore US Bikeshare Data
 #
+# Description
+# Use Python to understand U.S. bikeshare data. Calculate statistics and have an
+# interactive environment where a user chooses the data and filter for a dataset
+# to analyze. The user can filter the information by day of week and/or month.
+# Also the user can choose to inspect the raw data.
+#
 # Creation date: 18/11/2019    By: Ian Garcia-Tsao
 # Updated:       21/11/2019
 #
