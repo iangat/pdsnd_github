@@ -139,6 +139,7 @@ def load_data(city, month, day):
     # Create a column with hour
     city_df['Hour'] = city_df['Start Time'].map(lambda x: x.strftime('%H'))
 
+    # Filter the resulting table according to user's choices of month and day
     if (month is not None) and (day is not None):
         df = city_df[(city_df['Month'] == month) & (city_df['DOW'] == day)]
     elif month is not None:
