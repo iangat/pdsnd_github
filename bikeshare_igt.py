@@ -300,8 +300,14 @@ def user_stats(df, filter_option):
     if 'Birth Year' in df.columns:
         print('\nYear of birth')
         print('-------------------')
+
         print('Oldest user     : {:.0f}'.format(df['Birth Year'].min()))
+        if df['Birth Year'].min() < 1900:
+            print('                  (year is not possible)')
+
         print('Youngest user   : {:.0f}'.format(df['Birth Year'].max()))
+        if df['Birth Year'].max() > 2016:
+            print('                  (year is not possible)')
 
         df['Birth Year'] = df['Birth Year'].astype(str).map(lambda x: x[0:4])
         msg = 'Most common year: {}, Count: {:,}.'
