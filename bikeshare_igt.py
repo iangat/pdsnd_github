@@ -235,10 +235,10 @@ def trip_duration_stats(df, filter_option):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
     print_filter_options(df, filter_option)
-    msg = '{} travel time: {:,}h {}m {:.0f}s'
+    msg = '{} travel time: {:2,}h {:2,}m {:2.0f}s'
 
     # display total travel time
-    print(msg.format('Total', *h_m_s(df['Trip Duration'].sum())))
+    print(msg.format('Total  ', *h_m_s(df['Trip Duration'].sum())))
 
     # display mean travel time
     print(msg.format('Average', *h_m_s(df['Trip Duration'].mean())))
